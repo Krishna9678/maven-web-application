@@ -34,6 +34,7 @@ stage('CheckoutCode'){
   sh "mvn clean package"
   }
   }
+  */
 //Execute SonarQube Report
   stage ('SonarQube Report'){
   steps{
@@ -51,9 +52,9 @@ stage('CheckoutCode'){
   steps{
   sshagent(['eacebee0-9e03-444a-abf7-b301710768f1']){
   sh "scp -o StrictHostKeyChecking=no target/maven-web-application.war ec2-user@13.233.60.178:/opt/apache-tomcat-9.0.62/webapps/"
-  }
-  }
-  }
+   }
+   }
+  }/*
 }//stages closing
 post {
   always {
