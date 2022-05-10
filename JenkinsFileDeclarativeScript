@@ -54,7 +54,7 @@ stage('CheckoutCode'){
   sh "scp -o StrictHostKeyChecking=no target/maven-web-application.war ec2-user@13.233.60.178:/opt/apache-tomcat-9.0.62/webapps/"
    }
    }
-  }/*
+  }*/
 }//stages closing
 post {
   always {
